@@ -1,0 +1,221 @@
+.banner--text-img{
+    background-color: #F3F1F6;
+    margin-top: 36px;
+    margin-bottom: 100px;
+
+    .col-left{
+        padding-right: 21px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    h2{
+        font-size: 52px;
+        line-height: 54px;
+    }
+}
+.different-usage-package{
+     h2{
+        margin-bottom: 21px;
+        text-align: center;
+        text-transform: uppercase;
+     }
+
+    h5{
+
+       text-align: center;
+       margin-bottom:2rem;
+    }
+    .tile--content{       
+        ul li{
+            margin: 0;
+            list-style: none;
+        }
+    }
+}
+
+.usage--tile{
+    max-width: 410px;
+    width: 100%;
+    text-align: center; 
+
+    & , .tile--header{
+        display: flex;
+        flex-direction: column;
+    }
+    .tile--header{
+        flex-grow: 1;
+        margin-bottom: 24px;
+        p{
+            margin-bottom: 0;
+        }
+
+    }
+}
+.tile{
+    &--area{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    } 
+    &--header{
+        p{
+            color: #151515; 
+            opacity: 0.6;
+        }        
+    }
+    &--content{   
+        background-color: #F3F1F6;
+        text-align: center;
+        padding:46px 22px 22px 22px;
+        margin-bottom: 64px;
+        flex-grow: 1;
+    
+        h4{
+           font-size: 30px;
+           line-height: 50px;
+           text-transform: uppercase;
+        }
+        h6{
+          font-size: 21px;
+          line-height: 50px;          
+        }
+        h6 , li{
+            color: #151515;
+        }
+        p{
+            font-size: 16px;
+            line-height: 27px;
+            margin-bottom: 0;
+        }
+        ul{
+            text-align: left;
+            li{
+                font-size: 20px;
+                line-height: 34px;
+                list-style: disc;
+            }
+        }
+        h4,h6,p{
+            letter-spacing: 0.2px;
+            margin-bottom: 0;
+        }
+        span{
+            font-size: 15px;
+            line-height: 18px;
+            color: #6A6176;
+        }
+        .tile-btn{
+            width: 100%;
+            height: 50px;
+            color: #FFFFFF;
+            background: #9C8EC1;
+            font-size: 19px;
+            line-height: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            margin-top: 34px;
+            margin-bottom: 11.54px;
+         
+    
+            &::after{
+                content: '';
+                width: 9px;
+                height: 16px;
+                background-image: url(../images/white-arrow.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                margin-left: 10px;
+            }
+        }
+        .simple-link{
+            font-size: 16px;
+            line-height: 26px;
+            color:#6480E1;
+        }
+    }
+}
+.list--tile{
+    //margin-top: 132px;
+    .row{
+        align-items: center
+    }
+    h3{
+       font-size: 32px;
+       line-height: 50px;
+       margin-bottom: 26px;
+    }
+    .usage--tile{
+        margin-left: auto;
+    }
+
+    .list--item{
+        ul{
+            padding-left: 0;
+        }
+
+        li{
+            font-size: 18px;
+            line-height: 33px;
+    
+            &::before{
+                content: '';
+                width: 13px;
+                height: 10px;
+                background-image: url(../images/right-icon.svg);
+                background-position: center;
+                background-repeat: no-repeat;
+                display: inline-flex;
+                margin-right: 20px;
+                
+            }
+        }
+        .tile--content{
+            margin-bottom: 0;
+        }
+    }
+}
+.list--tile{
+    .tile--content {
+        margin-bottom: 0;
+    }
+
+    .row{
+        margin-bottom: 60px;
+    }
+    .usage--tile{
+        .tile--content{
+            li{
+                margin: 0;
+                list-style: none;
+            }
+        }
+    }
+} 
+
+@media only screen and (max-width: 991px) {
+    .tile--area{
+        align-items: center;
+        flex-direction: column;
+    }    
+    .list--tile{
+        .col-lg-6{
+          width: 50%;
+        }
+    }
+}
+@media only screen and (max-width: 768px) {
+    .list--tile{
+        .list--item{
+            background-color: #F3F1F6;
+        }
+       
+        .col-lg-6{
+          width: 100%;
+        }
+        .usage--tile{
+            margin: 30px auto;
+        }
+    }
+}

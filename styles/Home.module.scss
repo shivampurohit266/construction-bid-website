@@ -1,0 +1,74 @@
+@use "sass:map";
+@import "../styles/constants";
+
+.proppuHomeWrapper {
+    align-items: center;
+    display: grid;
+    justify-content: center; 
+}
+
+.proppuHome {
+    --proppuHome__gridColumns: 1fr 1fr;
+    --proppuHome__gridRows: 1fr;
+    --proppuHome__marginTop: 80px;
+    --page__topPadding: 34px;
+    --page__contentMaxWidth: 1200px;
+    display: grid;
+    gap: 50px;
+    grid-template-columns: var(--proppuHome__gridColumns);
+    grid-template-rows: var(--proppuHome__gridRows);
+    // padding-left: var(--page__sidePadding);
+    // padding-right: var(--page__sidePadding);
+    // margin-top: var(--proppuHome__marginTop, 130px);
+    // max-width: var(--page__contentMaxWidth, 1200px);
+    // padding: 0 60px;
+    // align-items: center;
+    max-width: var(--page__contentMaxWidth);
+    margin: var(--page__topPadding) auto 0 auto;
+    width: 90%;
+
+    .heroImage {
+        width: 80%;
+        pointer-events: none;
+        user-select: none;
+    }
+
+    .mainHeading {
+        color: #000000;
+        font-family: Cabin;
+        font-size: clamp(2rem, 5vw, 3rem);
+        margin: 0;
+    }
+
+    .proppuHome__text {
+        color: #000000;
+        font-family: Cabin;
+        font-size: 20px;
+        font-weight: thin;
+        line-height: 30px;
+        margin-top: 17px;
+    }
+
+    .proppuHome__bookADemo {
+        background-color: #9c8ec1;
+        border-radius: 5px;
+        border: none;
+        color: #ffffff;
+        cursor: pointer;
+        font-family: Cabin;
+        font-size: 15px;
+        font-weight: normal;
+        height: 42px;
+        text-transform: uppercase;
+        width: 142.5px;
+    }
+}
+
+@media only screen and (max-width: map.get($breakpoints, "mobile")) {
+    .proppuHome {
+        --proppuHome__gridColumns: 1fr;
+        --proppuHome__gridRows: auto auto;
+        --proppuHome__marginTop: 30px;
+        padding: 0 15px;
+    }
+}

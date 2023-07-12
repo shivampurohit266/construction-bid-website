@@ -1,0 +1,109 @@
+.video_tutorial_section {
+  padding: 15px 0;
+  .video_tutorial {
+    max-width: 780px;
+  }
+
+  button.youtube_btn.btn.btn-primary {
+    background: transparent;
+    color: black;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+  }
+
+  .tutorial_box {
+    max-width: 780px;
+  }
+
+  .tutorial_box {
+    p {
+      max-width: 644px;
+      font-size: 17px;
+      line-height: 25px;
+    }
+  }
+
+  .video_box {
+    padding: 35px 0 48px 0;
+
+    .ratio.ratio-16x9 {
+      --bs-aspect-ratio: 57.25%;
+    }
+  }
+
+  .youtube_btn {
+    svg {
+      color: #ff0000;
+    }
+  }
+
+  .tutorial_box {
+    max-width: 70%;
+  }
+
+  .container {
+    .video_title_box {
+      padding-bottom: 53px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .video_title_box {
+    h4 {
+      font-size: 36px;
+      line-height: 45px;
+      color: #151515;
+    }
+  }
+
+  .tutorial_box {
+    h5 {
+      font-size: 28px;
+      margin: 0;
+      line-height: 40px;
+    }
+  }
+
+  .atproppu_logo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .atproppu_logo svg {
+    color: #ff0000;
+  }
+}
+
+@media (max-width: 768px) {
+  .video_tutorial_section {
+    padding: 40px 0;
+    .video_tutorial {
+      max-width: 100%;
+    }
+    .tutorial_box {
+      max-width: 100%;
+    }
+    .video_title_box {
+      padding-bottom: 20px;
+      h4 {
+        font-size: 22px;
+        line-height: 32px;
+      }
+    }
+
+    .tutorial_box h5 {
+      font-size: 20px;
+    }
+
+    .tutorial_box p {
+      font-size: 16px;
+      padding: 0;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.sections {
+    margin: 6em auto;
+
+    h2 {
+        margin-bottom: 0.5em;
+       font-size: clamp(1.95rem, 5vw, 2.375rem);
+
+    }
+
+    img {
+        margin: 1em 0 1em 0;
+    }
+
+    ul {
+        color: #604368;
+        font-size: clamp(0.9375em, 5vw, 1.25rem);
+    }
+
+    li {
+        margin: 1.5em 0;
+    }
+
+    h3 {
+        margin: 1.5em 0 0 0;
+    }
+}
+
+.smallerH2 h2 {
+    font-size: clamp(1.95rem, 5vw, 2.375rem);
+    margin-bottom: 1em;
+}
+
+.smallerLists li {
+    margin: 0.5em 0;
+}

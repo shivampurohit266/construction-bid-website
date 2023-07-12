@@ -1,0 +1,236 @@
+@use "sass:map";
+@import "constants";
+
+:root {
+    --page__sidePadding: max(165px, 5%);
+    --page__topPadding: 34px;
+    --page__headerCollapseWidth: #{map.get($breakpoints, "mobile")};
+    --page__contentMaxWidth: 1200px;
+
+    --purple-700: #799ad5;
+    --purple-600: #799ad5;
+    --purple-500: #5c54c4;
+}
+
+@media only screen and (max-width: map.get($breakpoints, "large")) {
+    :root {
+        --page__sidePadding: 5%;
+    }
+}
+
+body {
+    font-family: Cabin, sans-serif, sans;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Cabin;
+    font-weight: 400;
+    color: #151515;
+    line-height: 1.1em;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+}
+
+h2 {
+    font-size: clamp(2.25rem, 5vw, 2.8125rem);
+    margin: 0 0 0.1em 0;
+}
+
+h3 {
+    font-size: clamp(1.55rem, 5vw, 2.2rem);
+    margin: 0.5em 0 0.3em 0;
+}
+
+ul,
+ol {
+    padding-left: 1em;
+}
+
+li {
+    margin: 0.5em 0;
+}
+
+p {
+    color: #604368;
+    line-height: 1.875em;
+    font-size: clamp(0.9375em, 5vw, 1.25rem);
+}
+
+button {
+    cursor: pointer;
+}
+*, html {
+    scroll-behavior: smooth !important;
+}
+.wrapper {
+    max-width: var(--page__contentMaxWidth);
+    margin: var(--page__topPadding) auto 0 auto;
+    width: 90%;
+}
+
+.button-transparent {
+    font-size: 1.1875rem;
+    color: white;
+    background: transparent !important;
+    padding: 0.65rem 0 !important;
+    border: none;
+    cursor: pointer;
+    margin: 1em 0;
+    display: inline-block;
+    border-radius: 2px;
+    text-align: left;
+
+    &:hover {
+        text-decoration: underline !important;
+    }
+
+    &::after {
+        content: "";
+        width: 1em;
+        height: 0.9em;
+        background-image: url("../static/images/icons/video-icon.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        display: inline-block;
+        margin-left: 0.8em;
+        margin-right: -0.3em;
+        transform: translateY(0.2em);
+    }
+}
+
+.button-purple {
+    font-size: 1.1875rem;
+    color: white;
+    background-color: #330f3f;
+    padding: 0.65rem 1.55rem;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 1em 0;
+    display: inline-block;
+    border-radius: 2px;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.button-video-icon {
+    &::after {
+        content: "";
+        width: 1em;
+        height: 0.9em;
+        background-image: url("../static/images/icons/video-icon.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        display: inline-block;
+        margin-left: 0.8em;
+        margin-right: -0.3em;
+        transform: translateY(0.2em);
+    }
+}
+.button-tryNow {
+    max-width: 128px;
+    border-radius: 5px;
+    background-color: #799ad5;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    color: #ffffff !important;
+    text-decoration: none;
+    margin: 1em 0;
+    display: inline-block;
+}
+.renovate__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+.renovate__text-container > p {
+    margin: 0 0 18px 0;
+    font-family: Cabin;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 40px;
+}
+@media only screen and (max-width: map.get($breakpoints, "mobile")) {
+    .renovate__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+.renovate__calculator-header {
+    font-family: Cabin;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 58px;
+    margin-bottom: 28px;
+}
+.button-blue {
+    background-color: #799ad5;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    margin: 1em 0;
+    display: inline-block;
+    border-radius: 6px;
+    width: 145px;
+    margin-left: 32px;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+@font-face {
+    font-family: Cabin;
+    font-weight: normal;
+    src: local(Cabin), url("../fonts/Cabin/Cabin-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: Cabin;
+    font-weight: bold;
+    src: local(Cabin), url("../fonts/Cabin/Cabin-Bold.ttf") format("truetype");
+}
+
+@keyframes fadeInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@media only screen and (max-width: map.get($breakpoints, "mobile")) {
+    .hidden-on-mobile {
+        display: none;
+    }
+
+    .button-blue  {
+        margin: 8px auto;
+    }
+}

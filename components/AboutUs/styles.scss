@@ -1,0 +1,81 @@
+@use "sass:map";
+@import "../../styles/constants";
+
+.about-us-wrapper {
+    --aboutUs__gridAutoFlow: column;
+    --aboutUs__gridGap: 30px;
+    --aboutUs__paddingBottom: 123px;
+    --aboutUs__teamGridColumns: 1fr 1fr 1fr 1fr;
+    --aboutUs__teamGridRows: 1fr;
+
+    display: grid;
+    justify-content: center;
+
+    .about-us {
+        max-width: var(--page__contentMaxWidth);
+        color: #604368;
+        padding-top: var(--aboutUs__paddingBottom);
+        padding-bottom: var(--aboutUs__paddingBottom);
+        padding-left: var(--page__sidePadding);
+        padding-right: var(--page__sidePadding);
+
+        .about-us__title {
+            color: #604368;
+            font-size: 52px;
+            line-height: 52px;
+            margin-bottom: 0.4em;
+        }
+
+        .about-us__p {
+            margin: 0.5em 0;
+            font-size: 20px;
+            line-height: 30px;
+            max-width: 48em;
+        }
+
+        .about-us__team {
+            display: grid;
+            gap: var(--aboutUs__gridGap);
+            grid-auto-flow: var(--aboutUs__gridAutoFlow);
+            grid-template-columns: var(--aboutUs__teamGridColumns);
+            grid-template-rows: var(--aboutUs__teamGridRows);
+            margin-top: 60px;
+        }
+
+        .about-us__team__entry {
+            font-size: 18px;
+            line-height: 30px;
+            margin: 0;
+
+            .about-us__team-title {
+                color: black;
+                font-weight: normal;
+                font-size: 21px;
+                line-height: 30px;
+            }
+
+            > dd {
+                margin: 0;
+            }
+        }
+
+        .about-us__email {
+            font-family: monospace;
+        }
+    }
+}
+
+@media only screen and (max-width: map.get($breakpoints, "medium")) {
+    .about-us-wrapper {
+        --aboutUs__teamGridColumns: 1fr 1fr;
+        --aboutUs__teamGridRows: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: map.get($breakpoints, "mobile")) {
+    .about-us-wrapper {
+        --aboutUs__gridAutoFlow: row;
+        --aboutUs__teamGridColumns: 1fr;
+        --aboutUs__teamGridRows: 1fr;
+    }
+}

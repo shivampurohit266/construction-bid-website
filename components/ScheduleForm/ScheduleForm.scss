@@ -1,0 +1,81 @@
+.schedule_form_section {
+    padding: 75px 0;
+
+    h3 {
+            padding-bottom: 30px;
+            font-size: 36px;
+            line-height: 45px;
+        }
+    .schedule_form_field {
+            max-width: 702px;
+
+            .form-control {
+                    color: #343434;
+                    font-size: 17px;
+                    padding: 12px 15px 12px 15px;
+                }
+            .btn-schedule_submit {
+                background-color: #799AD5;
+                border: transparent;
+                padding: 8px 34px;
+                color: #fff;
+            }
+        }
+
+        input[type="time"]::-webkit-calendar-picker-indicator {
+            color: rgba(0, 0, 0, 0);
+            opacity: 1;
+            display: block;
+            background-image: url("../../images/Time.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            color: rgba(0, 0, 0, 0);
+            opacity: 1;
+            display: block;
+            background-image: url("../../images/calender.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .schedule_form_section .form-control:focus {
+            box-shadow: none;
+            border-color: #ced4da;
+        }
+
+        button.btn.btn-schedule_submit {
+            padding: 11px 33px;
+        }
+
+        .schedule_form_section .btn-schedule_submit:active {
+            background: #799AD5;
+            color: #fff;
+        }
+
+        button.btn.btn-schedule_submit:hover {
+            background: #799AD5;
+            color: #fff;
+        }
+}
+@media (max-width:720px) {
+    .schedule_form_section {
+            padding: 40px 0;
+            h3 {
+                    font-size: 25px;
+                    line-height: normal;
+                }
+
+            .schedule_form_field .row {
+                    gap: 20px;
+                }
+
+                .schedule_form_field .row .col {
+                    flex: unset;
+                }
+        }
+
+
+}

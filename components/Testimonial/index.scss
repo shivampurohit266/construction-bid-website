@@ -1,0 +1,85 @@
+.testimonial-section {
+    padding: 100px 0px;
+}
+.owl-theme .owl-dots .owl-dot {
+    background-color: #F1F2FD !important;
+}
+.owl-item{
+    background: inherit !important;
+}
+.testimonial-section h2 {
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 60px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: #151515;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.bg-light-yellow{
+    background-color: #FFFFC9A8 !important;
+    ;
+}
+.bg-purple{
+    background: rgba(168, 189, 228, 0.48) !important; 
+}
+
+.testimonial-section .testimonial-block {
+    background: #F1F2FD;
+    margin: 10px;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.testimonial-section .testimonial-block p {
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 29px;
+    letter-spacing: 0.2px;
+    color: #343434;
+}
+
+.testimonial-section .testimonial-block .avtar {
+    display: flex;
+    align-items: center;
+}
+
+.testimonial-section .testimonial-block .avtar img {
+    margin-right: 15px;
+    width: 46px;
+}
+
+.testimonial-section .testimonial-block .avtar .name {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: #000000;
+}
+
+.testimonial-section .testimonial-block .avtar .client-des {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.2px;
+    color: #898989;
+}
+
+    
+
+@media only screen and (max-width: 767px) {
+    .testimonial-section .testimonial-block {
+        margin-bottom: 15px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .testimonial-section h2
+    {
+        font-size: 32px;
+        line-height: normal;
+    }
+}

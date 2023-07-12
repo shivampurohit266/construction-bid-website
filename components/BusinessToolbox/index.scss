@@ -1,0 +1,46 @@
+.toolbox-section {
+    padding: 250px 0px 80px;
+}
+
+.toolbox-section h2 {
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 50px;
+    margin-bottom: 30px;
+    letter-spacing: 0.2px;
+    color: #151515;
+}
+
+.toolbox-section .row {
+    align-items: center;
+}
+
+.toolbox-section ul li {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    color: #151515;
+    padding: 10px 0px;
+    list-style: none;
+    position: relative;
+    padding-left: 30px;
+}
+
+.toolbox-section ul li:before {
+    content: "✓";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+
+    .toolbox-section h2
+    {
+        font-size: 32px;
+        line-height: normal;
+    }
+}

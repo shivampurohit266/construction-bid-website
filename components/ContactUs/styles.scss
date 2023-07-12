@@ -1,0 +1,130 @@
+@use "sass:map";
+@import "../../styles/constants";
+
+.contact-us {
+    --contactUs__formGap: 36px;
+    --contactUs__formGridAreas: "name email" "phoneNumber whoAreYou" "message message"
+        "submit submit";
+    --contactUs__formPadding: 0px;
+    --contactUs__justifyForm: center;
+    --contactUs__paddingBottom: 120px;
+    --contactUs__width: 730px;
+
+    background-color: #ffffff;
+    padding-bottom: var(--contactUs__paddingBottom);
+}
+
+.contact-us-input {
+    box-sizing: border-box;
+    padding: 16px 15px;
+    border: none;
+    resize: none;
+    font-size: inherit;
+    font-family: inherit;
+    width: 100%;
+}
+
+.contact-us-input:focus-visible {
+    outline: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
+}
+
+.contact-form-heading {
+    margin: 0;
+    font-family: Cabin;
+    font-size: 52px;
+    font-weight: thin;
+    color: #000000;
+    text-align: center;
+    padding-top: 108px;
+    padding-left: var(--page__sidePadding);
+    padding-right: var(--page__sidePadding);
+}
+
+.contact-form-text {
+    font-family: Cabin;
+    font-size: 20px;
+    font-weight: thin;
+    color: #000000;
+    text-align: center;
+    padding-top: 22px;
+    padding-left: var(--page__sidePadding);
+    padding-right: var(--page__sidePadding);
+}
+
+.contact-us__form {
+    display: grid;
+    padding-left: var(--contactUs__formPadding);
+    padding-right: var(--contactUs__formPadding);
+    justify-content: var(--contactUs__justifyForm);
+}
+
+.contact-us__form__fields {
+    box-sizing: border-box;
+    width: var(--contactUs__width);
+    text-align: center;
+    margin-top: 75px;
+    display: grid;
+    gap: var(--contactUs__formGap);
+
+    grid-template-areas: var(--contactUs__formGridAreas);
+}
+
+.name-input {
+    grid-area: name;
+    background-color: #ffffff;
+}
+
+.email-input {
+    grid-area: email;
+    background-color: #ffffff;
+}
+
+.phone-number-input {
+    grid-area: phoneNumber;
+    background-color: #ffffff;
+}
+
+.who-input {
+    grid-area: whoAreYou;
+    background-color: #ffffff;
+}
+
+.message-input {
+    --contactUs__messageInput__height: 143px;
+    background-color: #ffffff;
+
+    grid-area: message;
+    height: var(--contactUs__messageInput__height) !important;
+}
+
+.submit-btn {
+    grid-area: submit;
+    background-color: #799ad5;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: Cabin;
+    font-size: 19px;
+    font-weight: thin;
+    width: 120px;
+    height: 46px;
+}
+
+@media only screen and (max-width: map.get($breakpoints, "mobile")) {
+    .contact-us {
+        --contactUs__formPadding: var(--page__sidePadding);
+        --contactUs__width: 100%;
+        --contactUs__justifyForm: stretch;
+        --contactUs__formGridAreas: "name" "email" "phoneNumber" "whoAreYou" "message" "submit";
+    }
+   .contact-us__form__fields{
+    display: block;
+   }
+   .contact-us__form__fields > div{
+    margin: 10px auto;
+   }
+ 
+   
+}

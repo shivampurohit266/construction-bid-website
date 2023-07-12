@@ -1,0 +1,120 @@
+@use "sass:map";
+@import "../../styles/constants";
+
+.feedEntry {
+    --feedEntry__boxShadowColor: lightgray;
+    box-shadow: 0px 0px 3px var(--feedEntry__boxShadowColor);
+    gap: 20px;
+    display: grid;
+    grid-template-columns: var(--feedEntry__gridColumns, 1fr 3fr);
+    grid-template-rows: var(--feedEntry__gridRows, 1fr);
+    height: auto;
+    border: thin solid lightgray;
+    padding: 10px;
+
+    p,
+    li,
+    ul {
+        margin: 0;
+    }
+
+    ul {
+        display: flex;
+        text-align: center;
+        list-style-type: none;
+        padding: 0;
+
+        li {
+            display: flex;
+            align-items: center;
+
+            background-color: var(--purple-600);
+            color: #fff;
+            padding: 3px 6px;
+            margin-right: 3px;
+            font-size: 0.8rem;
+            text-align: center;
+        }
+    }
+
+    .feedEntryImage {
+        display: grid;
+        align-content: center;
+        overflow: hidden;
+    }
+
+    .feedEntryDetails {
+        align-content: start;
+        display: grid;
+        grid-auto-flow: row;
+
+        button {
+            --purple-700: #799ad5;
+            --purple-600: #799ad5;
+            --purple-500: #5c54c4;
+            float: right;
+            padding: 0.7rem 1.5rem;
+            margin-right: 10px;
+
+            font-size: 1rem;
+            border-radius: 3px;
+            background-color: var(--purple-700);
+            color: #fff;
+            border: none;
+        }
+
+        .feedEntryUnits {
+            display: flex;
+            flex-direction: row;
+
+            p {
+                display: flex;
+                flex-direction: column;
+                width: 5rem;
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .feedEntryTitle {
+        font-size: 22px;
+    }
+
+    &:hover {
+        --feedEntry__boxShadowColor: gray;
+    }
+}
+.feedEntryDescription {
+    line-height: 28px;
+    font-size: 18px;
+}
+@media only screen and (max-width: map.get($breakpoints, "medium")) {
+    .feedEntry {
+        --feedEntry__gridColumns: 2fr 3fr;
+    }
+    
+    .feedEntryDetails {
+        button {
+            margin: 1rem 0;
+        }
+        .feedEntryTitle {
+            font-size: 15px;
+        }
+    }
+}
+
+@media only screen and (max-width: map.get($breakpoints, "mobile")) {
+    .feedEntry {
+        --feedEntry__gridColumns: 1fr;
+        --feedEntry__gridRows: auto auto;
+    }
+
+    .feedEntryDetails {
+        button {
+            margin: 1rem 0;
+        }
+        .feedEntryTitle {
+            font-size: 15px;
+        }
+    }
+}

@@ -1,0 +1,290 @@
+@use "sass:map";
+@import "../styles/constants";
+
+.proppu-footer {
+    --proppuFooter__bgColor: #330f3f;
+    --proppuFooter__bookDemo__bgColor: #799ad5;
+    --proppuFooter__spacerColor: rgba(96, 67, 104, 0.45);
+    --proppuFooter__subscribeInput__color: #604368;
+    --proppuFooter__gridAutoFlow: column;
+    ----page__topPadding: 34px;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    h2,
+    h3 {
+        color: #504f5d;
+    }
+
+    .wrapper {
+        --page__contentMaxWidth: 1200px;
+        margin-top: 0 !important;
+        margin: var(--page__topPadding) auto 0 auto;
+        max-width: var(--page__contentMaxWidth);
+        width: 90%;
+    }
+
+    color: #504f5d;
+    font-family: Cabin;
+    font-size: 16px;
+    background-color: #fbf9f7;
+    display: grid;
+    grid-row: auto auto;
+
+    .language-footer {
+        margin-left: 2rem;
+    }
+    .language-footer ul {
+        list-style: none;
+    }
+
+    .footer-logo {
+        display: inline-flex;
+        flex-direction: row;
+    }
+
+    .proppu-footer__primary-content {
+        --page__topPadding: 34px;
+        padding-top: var(--page__topPadding);
+        display: grid;
+        grid-auto-flow: row;
+        gap: 34px;
+    }
+
+    .book-a-demo {
+        border: none;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-family: Cabin;
+        font-size: 15px;
+        border-radius: 5px;
+        width: 153px;
+        background-color: var(--proppuFooter__bookDemo__bgColor);
+        padding: 15px;
+    }
+
+    .proppu-footer__heading {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .proppu-footer__see-in-action {
+        display: inline-flex;
+        flex-direction: row;
+        gap: 0px;
+        justify-content: flex-end;
+
+        h3 {
+            font-size: 25px;
+            margin-right: 15px;
+        }
+    }
+
+    .header__links__dropdown-item {
+        position: relative;
+        border-radius: 5px;
+        height: 42px;
+
+        &:hover>.header__links__dropdown {
+            display: block;
+        }
+
+        div {
+            margin: 6px;
+            width: 90px;
+        }
+
+        svg {
+            color: gray;
+        }
+    }
+
+    .footer_social-media-links {
+        margin-left: 10px;
+    }
+
+    .header__links__dropdown {
+        z-index: 100;
+        background-color: white;
+        list-style-type: none;
+        position: absolute;
+        margin: 0;
+        top: 100%;
+        left: 0;
+        display: none;
+        padding: 10px;
+        box-shadow: 0px 3px 3px lightgray;
+
+        li {
+            padding: 5px 0px;
+
+            // font-size: 5px !important;
+            &:first-child {
+                padding-top: 0px;
+            }
+
+            &:last-child {
+                padding-bottom: 0px;
+            }
+        }
+    }
+
+    .proppu-footer__divider {
+        width: 100%;
+        height: 1px;
+        background-color: var(--proppuFooter__spacerColor);
+    }
+
+    .proppu-footer__logo {
+        pointer-events: none;
+        user-select: none;
+        width: 197px;
+        height: 45px;
+    }
+
+    .proppu-footer__content {
+        display: grid;
+        grid-auto-flow: var(--proppuFooter__gridAutoFlow);
+        gap: 40px;
+        margin-bottom: 60px;
+
+        >ul {
+            margin: 0;
+        }
+    }
+
+    .proppu-footer__list {
+        list-style-type: none;
+        padding: 0;
+        line-height: 33px;
+    }
+
+    .proppu-footer__copyright {
+        background-color: #e5e5e5;
+        color: #604368;
+        padding-bottom: 17px;
+        padding-top: 17px;
+
+        svg,
+        span {
+            color: #504f5d;
+            font-size: 18px;
+        }
+    }
+
+    .proppu-footer__subscribe {
+        h3 {
+            font-size: 25px;
+            margin-bottom: 0.7em;
+            width: 173px;
+        }
+    }
+
+    .proppu-footer__subscribe-input-wrapper {
+        max-width: 255px;
+        display: grid;
+        grid-template-columns: auto min-content;
+    }
+
+    .proppu-footer__subscribe-input {
+        grid-row: 1;
+        grid-column: 1;
+        width: 100%;
+        outline: none;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #604368;
+        padding-bottom: 0.7rem;
+        color: #000000;
+        font-family: inherit;
+        font-size: 18px;
+        margin-top: 5px;
+        padding-left:0.3rem;
+
+        &::placeholder {
+            color: var(--proppuFooter__subscribeInput__color);
+            font-size: 18px;
+        }
+    }
+
+    .proppu-footer__subscribe-input-send {
+        border: none;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-family: Cabin;
+        font-size: 15px;
+        border-radius: 5px;
+        width: 135px;
+        background-color: var(--proppuFooter__bookDemo__bgColor);
+        padding: 12px;
+        margin-top: 10px;
+    }
+
+    .proppu-footer__link {
+        cursor: pointer;
+        color: #6480e1;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .proppu-footer {
+        --proppuFooter__gridAutoFlow: row;
+
+        .proppu-footer__copyright {
+            padding-bottom: 5px;
+            text-align: center;
+
+            span {
+                padding: 0;
+            }
+
+            a:nth-child(4)::before {
+                content: "\a";
+                white-space: pre;
+
+            }
+        }
+        
+    }
+
+    .proppu-footer__logo {
+        margin-bottom: 1.5em;
+    }
+
+    .proppu-footer__subscribe>h3 {
+        min-width: 90%;
+    }
+
+    .proppu-footer .proppu-footer__see-in-action {
+        justify-content: flex-start;
+    }
+
+    .proppu-footer .footer_social-media-links {
+        margin-left: 2px;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .proppu-footer .proppu-footer__see-in-action h3 {
+        font-size: 18px;
+        margin-right: 15px;
+    }
+    .proppu-footer .book-a-demo {
+        border: none;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-family: Cabin;
+        font-size: 15px;
+        border-radius: 5px;
+        width: 127px;
+        background-color: var(--proppuFooter__bookDemo__bgColor);
+        padding: 9px;
+    }
+}

@@ -1,0 +1,160 @@
+.banner a {
+    background: #799AD5;
+    border-radius: 5px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 8px 15px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.banner a:hover {
+    text-decoration: none;
+    background: #9C8EC1;
+}
+
+    .wrapperForContent {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        
+    }
+    .accordion-heading__numbers {
+        width: 50px;
+        height: 50px;
+        border-radius: 30%;
+        color: #000000;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 4px 13px 4px 4px;
+    }
+
+.all-in-one h2 {
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 58px;
+    letter-spacing: 0.2px;
+    color: #151515;
+    margin-bottom: 30px;
+    max-width: 380px;
+}
+
+.all-in-one ul {
+    list-style: none;
+    cursor: pointer;
+}
+
+.all-in-one ul li {
+    background: rgba(225, 220, 236, 0.48);
+    box-shadow: 4px 5px 8px rgba(0, 0, 0, 0.11);
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: 0.2px;
+    color: #151515;
+    padding: 20px 30px;
+    margin-bottom: 15px;
+}
+
+.all-in-one ul .li0 {
+    background: rgba(225, 220, 236, 0.48);
+}
+
+.all-in-one ul .li1 {
+    background: #d6e0f2;
+}
+
+.all-in-one ul .li2 {
+    background: #e2dded;
+}
+
+.all-in-one ul .li3 {
+    background: #cbecf8;
+}
+
+.all-in-one ul .li4 {
+    background: #d3def1;
+}
+
+.all-in-one ul .li5 {
+    background: #e3eda4;
+}
+
+.all-in-one .row {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.all-in-one .row .create-text {
+    background: #f1eef6;
+    padding: 100px 60px;
+    border-radius: 0px 180px;
+    height: auto;
+    justify-content: center;
+
+}
+
+.all-in-one .row .create-text p {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    color: #232329;
+}
+
+@media only screen and (max-width: 767px) {
+    .all-in-one h2,
+    .how-it-works h2 {
+        font-size: 32px;
+        line-height: normal;
+        max-width: 100%;
+    }
+
+    .all-in-one ul li , span{
+        padding: 15px 20px;
+        font-size: 18px;
+        margin-left: -20px;
+    }
+
+    .all-in-one .row .create-text {
+        background: #f1eef6;
+        padding: 100px 30px;
+        border-radius: 0px 120px;
+        margin-top: 30px;
+        height: 550px;
+    }
+    .all-in-one .row .create-text p {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 35px;
+        display: flex;
+        align-items: center;
+        color: #232329;
+    }
+
+    .description {
+        text-align: left;
+    }
+}
+
+
+@media only screen and (max-width: 1100px) {
+   
+    .all-in-one {
+        .col-lg-6 {
+            flex: 0 0 auto; 
+            width: 100%; 
+        }
+    }
+    .all-in-one ul li , span{
+        margin-left: -18px;
+    }
+
+
+}

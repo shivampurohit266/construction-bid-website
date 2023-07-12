@@ -1,0 +1,81 @@
+.marketplace-section {
+    background: #B6ABD1;
+    padding-top: 100px;
+}
+
+.marketplace-section h2, h1 {
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 50px;
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+}
+
+.marketplace-section p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 32px;
+    color: #FFFFFF;
+    margin: 15px 0px;
+}
+
+.marketplace-section ul li {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 24px;
+    color: #fff;
+    padding: 10px 0px;
+    list-style: none;
+    position: relative;
+    padding-left: 30px;
+}
+
+.marketplace-section ul li:before {
+    content: "✓";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 10px;
+}
+
+.marketplace-heading {
+    text-align: left;
+    margin: 2% 6% 6% 6%;
+}
+
+.marketplace-section .marketplace-img {
+    margin-bottom: -150px;
+}
+
+
+@media only screen and (max-width: 991px) {
+
+
+    .marketplace-section .col-lg-8 {
+        order: 2;
+    }
+
+    .marketplace-heading {
+        margin: 0px;
+    }
+
+    .marketplace-section .col-lg-4 {
+        order: 1;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .marketplace-section h2, h1
+    {
+        font-size: 32px;
+        line-height: normal;
+    }
+
+    .marketplace-heading {
+        margin: 0px;
+    }
+}

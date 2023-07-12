@@ -1,0 +1,16 @@
+.tosAndPrivacyPage {
+    --page__contentMaxWidth: 1200px;
+    max-width: var(--page__contentMaxWidth);
+
+    p{
+        color: #000000;
+    }
+    ol {
+        & li::marker {
+            font-size: clamp(0.9375em, 5vw, 1.25rem);
+        }
+        h3 {
+            font-size: clamp(0.9375em, 5vw, 1.25rem);
+        }
+    }
+}

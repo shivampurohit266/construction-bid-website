@@ -1,0 +1,184 @@
+@use "sass:map";
+@import "../styles/constants";
+
+.img_container {
+    position: relative;
+    // padding: 0 30px;
+    margin-top: 90px;
+    // margin: 20px;
+
+    .carousel_indicators {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 15;
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+        margin-right: 15%;
+        margin-left: 15%;
+        list-style: none;
+
+        li {
+            display: none;
+        }
+
+        // .active {
+        //     opacity: 1;
+        //     background: transparent !important;
+        // }
+    }
+    .imageStyle {
+        touch-action: auto;
+        height: 350px;
+        width: 480px;
+    }
+    .left_arrow {
+        position: absolute;
+        left: 11rem;
+        top: 90%;
+        width: 25px;
+        filter: invert(100%) sepia(96%) saturate(174%) hue-rotate(4deg) brightness(10)
+            contrast(74%);
+        cursor: pointer;
+        z-index: 5;
+        border: 3px solid white;
+        background: white;
+        width: 2%;
+        padding: 5px;
+    }
+
+    .right_arrow {
+        width: 25px;
+        z-index: 5;
+        position: absolute;
+        // right: 1rem;
+        left: 13.2rem;
+        float: left;
+        top: 90%;
+        filter: invert(100%) sepia(96%) saturate(174%) hue-rotate(4deg) brightness(10)
+            contrast(74%);
+        cursor: pointer;
+        border: 3px solid white;
+        background: white;
+        width: 2%;
+        padding: 5px;
+        margin: 0 0.8%;
+    }
+
+}
+.slick-prev:before, .slick-next:before {
+    opacity: 3 ;
+    }      
+    .slick-prev:before{
+        font-size: 25px ;
+    }
+    .slick-next:before{
+        font-size: 25px ;
+    }
+.slick-next ,.slick-prev{
+    z-index: 1;
+    // margin-top: 250px;
+    margin-left: 25px;
+    position: absolute;
+    padding: 0 20px ;
+    right: 20px ;
+    filter: invert(0) sepia(96%) saturate(174%) hue-rotate(4deg) brightness(10)
+            contrast(74%);
+        background: white;
+}
+.feedback__section-container {
+    display: grid !important;
+    grid-template-columns: 1fr 500px;
+    grid-template-rows: 1fr;
+    // margin-top: 162px;
+    background-color: #34323E;
+    color: #ffffff;
+    // padding-left: 40px;
+    .feedback__section-left{
+        padding: 0 170px;
+        margin-top: 10px;
+    }
+}
+.feedback__section-header {
+    margin: 70px 0px 40px 0px;
+    max-width: 590px;
+    height: 73px;
+    font-family: Cabin;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 60px;
+    letter-spacing: 0.2px;
+}
+.feedback__section-body {
+    max-width: max-content;
+    margin-bottom: 21px;
+    // margin-right: 40px;
+    font-family: Cabin;
+    font-weight: 400;
+    font-size: 20px;
+    // align-items: center;
+    line-height: 30px;
+}
+
+.feedback__section-footer {
+    font-family: Cabin;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 28px;
+    font-style: italic;
+    margin-top: 3rem;
+}
+
+.feedback__section-image {
+    height: 100%;
+}
+@media only screen and (max-width: 767px) {
+    .img_container{
+        padding: 0;
+    }
+    
+    .feedback__section-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr !important;
+        padding-left: var(--page__sidePadding);
+        padding-right: var(--page__sidePadding);
+        height: 960px !important;
+        .feedback__section-left{
+            padding: 0;
+        }
+    }
+    .feedback__section-body{
+        margin-top: 20px;
+        font-size: 15px !important;
+    }
+    .feedback__section-image {
+        width: 100%;
+    }
+    .feedback__section-right {
+        margin-top: 2rem;
+        padding: 0 !important;
+    }
+}
+
+@media only screen and (max-width: map.get($breakpoints, "medium")) {
+    .feedback__section-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        padding-left: var(--page__sidePadding);
+        height: 900px;
+        .feedback__section-left{
+            padding: 0;
+        }
+    }
+    .feedback__section-header {
+        margin-top: 70px;
+    }
+    .feedback__section-body{
+        font-size: 17px;
+    }
+    .feedback__section-right{
+        padding: 15px 50px;
+    }
+}

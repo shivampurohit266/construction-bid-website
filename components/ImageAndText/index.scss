@@ -1,0 +1,28 @@
+.section {
+    // display: flex;
+    // gap: 3em;
+    // max-width: 90em;
+
+    & > div {
+        flex: 1;
+    }
+
+    ul {
+        font-size: clamp(0.9375rem, 5vw, 1.25rem);
+        color: #604368;
+    }
+
+    :global(.imageAndText_image) {
+        text-align: center;
+    }
+}
+
+:global(.wrapper) .section {
+    width: 100%;
+}
+
+@media only screen and (max-width: 45em) {
+    .section {
+        flex-flow: column;
+    }
+}

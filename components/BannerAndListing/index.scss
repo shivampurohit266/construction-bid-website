@@ -1,0 +1,75 @@
+.run-project {
+    padding: 0px 0px 100px
+}
+
+.run-project h2 {
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 50px;
+    letter-spacing: 0.2px;
+    color: #151515;
+}
+
+.run-project .sub-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 35px;
+    color: #151515;
+    max-width: 645px;
+    margin-top: 20px;
+}
+
+.run-project .row {
+    margin-top: 60px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.run-project ul li {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 40px;
+    color: #151515;
+    list-style: none;
+}
+
+.run-project ul li:before {
+    content: "✓";
+    font-weight: 900;
+    font-family: "Font Awesome 6 Free";
+    padding-right: 10px;
+}
+
+.run-project a {
+    background: #fff;
+    border: 1px solid;
+    border-radius: 5px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    color: #000000;
+    padding: 8px 15px;
+    display: inline-block;
+    text-decoration: none;
+    margin-left: 40px;
+    transition: all .4s ease;
+
+    &:hover{
+        background-color: #000;
+        color: #fff;
+        border-color: #000;
+    }
+}
+
+.run-project a:hover {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 767px) {
+
+    .run-project h2 {
+        font-size: 32px;
+        line-height: normal;
+        margin-bottom: 30px;
+    }
+}    

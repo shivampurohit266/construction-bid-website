@@ -1,0 +1,33 @@
+.input {
+    outline: none;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    border: unset;
+    width: 17rem;
+    margin: 0 0.2rem;
+    font-size: 1.05em;
+
+    &:focus {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
+    }
+}
+
+.input.inputWithShadow{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
+}
+
+.input[type="number"]::-webkit-inner-spin-button,
+.input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.input:first-child {
+    background-image: url("../../images/pin-point.png");
+    background-repeat: no-repeat;
+    background-position: left 10px bottom 15px;
+}
+.input:nth-child(2) {
+    background-image: url("../../images/search-icon.png");
+    background-repeat: no-repeat;
+    background-position: left 10px bottom 19px;
+}

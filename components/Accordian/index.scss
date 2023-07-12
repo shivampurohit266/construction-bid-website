@@ -1,0 +1,95 @@
+.feed--accordion{
+    margin-bottom: 184.36px;
+    h5{
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 23.5px;
+      font-weight: 500;
+    }
+    .accordion--item-title ,h5 , button.accordion-button{
+        color: #000;
+    }
+
+    .accordion-body ,  button.accordion-button{
+        padding-left: 0;
+    }
+
+    button.accordion-button{
+        font-size: 18px;
+        line-height: 47px;
+        padding-bottom: 8px;
+        border:none;        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: transparent;
+  
+        &::after{
+          display: inline-block;
+          content: '';
+          width: 16px;
+          height: 8.02px;
+          background-image: url(../../images/arrow-up-black.svg);
+          background-position: center;
+        }
+
+        &:focus{
+            border: none;
+            box-shadow:none;
+        }
+    }
+    .accordion{
+        &-body{
+            display: flex;
+            flex-wrap: wrap;
+            span{
+                color:#000;
+                padding-right: 13px;
+                font-weight: 500;
+            }
+        }
+        &-item{
+            border: none;           
+        }
+        &-header{
+            border-bottom: 1px solid #EAEAEA;
+        }
+
+    }
+    .content--que-ans{
+        margin-bottom: 15.19px;
+        max-width: 50%;
+        width: 100%;
+        div{
+            color: #343434;
+        }
+    }
+
+//   .accordion--item{
+//     background-color: transparent;
+//     height: auto;
+//     width: 100%;
+  
+//     &-title{
+     
+//     }
+
+//     &:not(:last-child){
+//         .accordion--item-content{
+//             padding-top: 20px;
+//         }
+//     }
+
+//     &-content{
+//        font-size: 16px;
+//        line-height: 26px;
+//        display: flex;
+//        flex-wrap: wrap;
+//        color: #343434;
+//     }
+
+
+
+//   }
+}
+

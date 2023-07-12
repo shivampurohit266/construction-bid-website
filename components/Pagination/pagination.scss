@@ -1,0 +1,138 @@
+.main-table {
+    .table-heading {
+      background-color: #3a5998;
+      color: white;
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0.03em;
+      border-bottom-width: 2px;
+    }
+    .sortable {
+      cursor: pointer;
+    }
+    td {
+      font-size: 12px;
+      line-height: 48px;
+      letter-spacing: 0.03em;
+      border-bottom-width: 2px;
+    }
+    .btn {
+      text-align: start;
+      font-size: 30px;
+      padding: 0px;
+      background-color: #ffff;
+      color: rgb(10, 10, 10);
+      border: 0px;
+    }
+    .btn:hover {
+      color: #3a5998;
+    }
+    .btn-check:checked + .btn-success,
+    .btn-check:active + .btn-success,
+    .btn-success:active,
+    .btn-success.active,
+    .show > .btn-success.dropdown-toggle {
+      color: #3a5998;
+      background-color: #ffff;
+      border: 0px;
+      box-shadow: none;
+    }
+    .btn-success:focus {
+      box-shadow: none;
+    }
+    .dropdown-toggle::after {
+      content: none;
+    }
+   
+  }
+  .main-table-bottom {
+    .load-more {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    .select-height {
+      height: 38px;
+      border: 1px solid #dee2e6;
+    }
+  }
+ 
+ .pagination_container{
+  .page_showing_col{
+    p{
+      margin: 0;
+    }
+  }
+  .pagination_box{
+    align-items: center;   
+    .blog_pagination{
+      margin: 0;
+      .active{
+        border-bottom: none !important;
+        
+        span{
+          padding: 4px 12px;
+          display: inline-block;         
+        }
+      }
+      li{
+        margin: 0;      
+        
+        a{
+          padding: 5px 12px;
+          display: inline-block;
+          span{
+            font-size: 15.1px;
+          }
+        }
+      }
+    }
+
+  }
+
+ }
+  
+  @media (min-width:769px) and (max-width:1024px) {
+    .pagination_container{
+      .pagination_inner_box {
+        display: flex;
+        width: 70%;
+        justify-content:center;
+      }
+    }
+    
+  }
+ @media (max-width:768px) {
+  .blog-page{
+    .pagination_container{
+      flex-direction: column;
+      width: 100%;
+      max-width: 100%;
+
+      .pagination_inner_box{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        .pagination_box{
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: space-between !important;
+          width: 100%;
+         
+          .blog_pagination {
+            width: 90%;
+            justify-content: center;
+            margin: auto;
+          }
+        }
+      }
+      
+    }
+    .page_showing_col{
+      width: 100%;
+    }
+    
+  }
+ }

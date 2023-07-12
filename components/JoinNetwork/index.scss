@@ -1,0 +1,43 @@
+.join-network {
+    padding: 100px 0px;
+}
+
+.join-network h2 {
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 60px;
+    letter-spacing: 0.2px;
+    color: #151515;
+    margin-bottom: 80px;
+}
+
+.join-network ul li {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    color: #151515;
+    padding: 10px 0px;
+    list-style: none;
+    position: relative;
+    padding-left: 30px;
+}
+
+.join-network ul li:before {
+    content: "✓";
+    font-family: "Font Awesome 6 Free";
+    font-size:  26px;
+    font-weight: 200;
+    position: absolute;
+    left: 0;
+    top: 12px;
+
+}
+
+@media only screen and (max-width: 991px) {
+    .join-network h2 {
+        font-size: 28px;
+        line-height: normal;
+        margin-bottom: 30px;
+    }
+}

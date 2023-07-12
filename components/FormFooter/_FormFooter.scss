@@ -1,0 +1,57 @@
+@use "sass:map";
+@import "../../styles/constants";
+.formContainer {
+    background-color: #fbf9f7;
+    margin: 0;
+}
+.formFooterContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 36px 180px 27px 166px;
+}
+.footerLanguageLinks {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    // grid-template-columns: 1fr 1fr;
+}
+.form-footer-item {
+    align-self: flex-start;
+}
+
+.form-footer-list {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    grid-template-rows: 1fr;
+    margin-top: 14px;
+}
+@media only screen and (max-width: map.get($breakpoints, "medium")) {
+    .formFooterContainer {
+        --page__sidePadding: 5%;
+        padding-left: var(--page__sidePadding);
+        padding-right: var(--page__sidePadding);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    .footerLanguageLinks {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    }
+}
+@media only screen and (max-width: map.get($breakpoints, "mobile")) {
+    .formFooterContainer {
+        padding-left: var(--page__sidePadding);
+        padding-right: var(--page__sidePadding);
+        display: grid;
+        grid-template-columns: 1fr;
+        // grid-template-rows: 1fr 1fr 1fr;
+    }
+    .footerLanguageLinks {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    
+    }
+}

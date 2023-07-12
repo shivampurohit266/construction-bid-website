@@ -1,0 +1,113 @@
+.questionnaire_section {
+  .questionnaire_title {
+    max-width: 100%;
+    font-size: 28px;
+    line-height: 39px;
+    letter-spacing: 0.2px;
+    padding-right: 20px;
+    margin-top: 40px;
+  }
+
+  .questionnaire_form_group {
+    display: flex;
+    .from_inner_group {
+      width: 30%;
+      max-width: 100%;
+    }
+    .form_group_inner {
+      display: flex;
+      flex-direction: column;
+      padding-top: 20px;
+      justify-content: flex-start;
+      position: relative;
+      gap: 6px;
+      .form-control {
+        max-width: 176px;
+        height: 49px;
+      }
+      .input_file_full {
+        width: 70%;
+        height: 50px;
+      }
+      .input_placeholders {
+        position: absolute;
+        top: 10px;
+        padding-left: 20px;
+        height: 50px;
+        width: 70%;
+        font-weight: 500;
+        display: flex;
+        color: #330f3f60;
+        align-items: center;
+        gap: 5px;
+        background-color: #fff;
+      }
+      .input_placeholders_file {
+        position: absolute;
+        justify-content: center;
+        font-weight: 500;
+        display: flex;
+        color: #330f3f60;
+        align-items: center;
+        gap: 5px;
+        z-index: 0;
+        width: 108px;
+        height: 40px;
+        background: #fff;
+      }
+      .input_placeholders_date {
+        position: absolute;
+        padding-left: 20px;
+        height: 100%;
+        font-weight: 500;
+        display: flex;
+        color: #330f3f60;
+        align-items: center;
+      }
+    }
+    input {
+      box-shadow: none;
+
+      &::placeholder {
+        color: #330f3f60;
+      }
+    }
+    input[type="date"] {
+      position: relative;
+      // &::-webkit-calendar-picker-indicator {
+      //   background: none;
+      //   background-image: url("../../images/calender.svg");
+      //   background-repeat: no-repeat;
+      //   background-size: 18px;
+      //   background-position: right;
+      //   width: 100%;
+      //   cursor: pointer;
+      // }
+    }
+    input[type="radio"] {
+      background-color: #9c8ec1;
+      border: #9c8ec1;
+      box-shadow: none;
+    }
+    input[type="file"] {
+      border: #9c8ec1;
+      box-shadow: none;
+      color: transparent;
+      cursor: pointer;
+      position: relative;
+      height: 37px;
+      width: 108px;
+      z-index: 1;
+      background-color: transparent;
+      &::file-selector-button {
+        display: none;
+      }
+    }
+  }
+  .hr {
+    color: #fff;
+    padding: 0px;
+    height: 2px;
+    background: white;
+  }
+}

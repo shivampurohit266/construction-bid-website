@@ -1,0 +1,89 @@
+.container {
+    max-width: 1200px;
+}
+
+.back-purple {
+    background-color: #B6ABD1;
+}
+
+.bg-light-purple {
+    background-color: #F1F2FD;
+}
+
+.bg-light-grey {
+    background-color: #F1F2FD;
+}
+.bg-light-yellow{
+    background-color: #FFFFC9A8;
+    ;
+}
+.bg-blue{
+    background: rgba(121, 154, 213, 1);
+
+}
+.Rowreverse{
+    flex-direction: row-reverse;
+}
+.banner {
+    padding-top: 0px;
+}
+
+.banner h1 {
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 58px;
+    letter-spacing: 0.2px;
+    color: #151515;
+}
+
+.banner p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 32px;
+    color: #151515;
+    margin: 15px 0px;
+}
+
+.banner .banner-img {
+    margin-left: auto;
+    display: block;
+}
+
+.banner a {
+    background: #9C8EC1;
+    border-radius: 5px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 8px 15px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.banner a:hover {
+    text-decoration: none;
+    background: #799AD5 !important;
+
+}
+
+.banner .row {
+    align-items: center;
+}
+
+
+@media only screen and (max-width: 991px) {
+    .banner {
+        text-align: center;
+    }
+
+    .banner h1 {
+        text-align: center;
+        font-size: 35px;
+        line-height: normal;
+    }
+
+    .banner .banner-img {
+        margin: 30px auto 0 auto;
+    }
+}

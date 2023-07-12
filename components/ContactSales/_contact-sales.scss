@@ -1,0 +1,36 @@
+@use "sass:map";
+@import "../../styles/constants";
+
+.contactSales {
+    --contactSales__gridColumns: min-content auto;
+    --contactSales__gridRows: 1fr;
+    align-items: center;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: var(--contactSales__gridColumns);
+    grid-template-rows: var(--contactSales__gridRows);
+    justify-content: center;
+    max-width: var(--page__maxContentWidth);
+    padding-left: var(--page__sidePadding);
+    padding-right: var(--page__sidePadding);
+}
+
+.contactPicture {
+    // background-color: lightgrey;
+    background-image: url("../../images/Vili.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    clip-path: circle(closest-side);
+    min-height: 350px;
+    min-width: 350px;
+    width: 100%;
+}
+
+@media only screen and (max-width: map.get($breakpoints, "mobile")) {
+    .contactSales {
+        --contactSales__gridColumns: 1fr;
+        --contactSales__grirdRows: auto auto;
+        text-align: center;
+    }
+}

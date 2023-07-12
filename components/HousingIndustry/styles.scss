@@ -1,0 +1,126 @@
+@use "sass:map";
+@import "../../styles/constants";
+
+.housing-industry-wrapper {
+    --housingIndustry__marginTop: 120px;
+    --housingIndustry__sectionWidth: 607px;
+    --accordionItem__sidePadding: 0px;
+
+    margin-top: var(--housingIndustry__marginTop);
+    background-color: #f3f1f6;
+}
+
+.btn-proppu-view-listings {
+    background-color: #799ad5;
+    border-radius: 5px;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: Cabin;
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: uppercase;
+    width: 142.5px;
+    padding: 8px 12px;
+}
+
+.housing-industry {
+    display: grid;
+    --housingIndustry__gridColumns: 1fr 0.8fr;
+    --housingIndustry__gridRows: 1fr;
+    grid-template-columns: var(--housingIndustry__gridColumns);
+    grid-template-rows: var(--housingIndustry__gridRows);
+    padding-left: var(--page__sidePadding);
+}
+.housing__industry-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.accordion-items {
+    --accordionItem__toggle__bgColor: transparent;
+    --accordionItem__toggle__color: black;
+    height: 49px;
+    max-width: 487px;
+    margin-bottom: 29px;
+    box-sizing: border-box;
+    background-color: #f3f1f6;
+    border: none;
+    user-select: none;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    .accordion-heading {
+        font-family: Cabin;
+        font-size: 20px;
+        font-weight: normal;
+        border-radius: 73px;
+        background-color: #9c8ec1;
+
+        &__content {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            color: #ffffff;
+
+        }
+        &__numbers {
+            width: 40px;
+            height: 40px;
+            border-radius: 109px;
+            color: #000000;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 4px 13px 4px 4px;
+        }
+    }
+}
+
+.housing-industry__heading {
+    color: #151515;
+    font-family: Cabin;
+    font-size: clamp(2rem, 5vw, 3rem);
+    max-width: 487px;
+    margin-bottom: 59px;
+    margin-top: 60px;
+}
+
+.housing__industry-image {
+    height: 100%;
+}
+@media only screen and (max-width: map.get($breakpoints, "medium")) {
+    .accordion-item {
+        max-width: 387px;
+    }
+    .accordion-heading__content {
+        font-size: 17px;
+    }
+}
+@media only screen and (max-width: map.get($breakpoints, "mobile")) {
+    .housing-industry {
+        --housingIndustry__gridColumns: 1fr;
+        --housingIndustry__gridRows: auto auto;
+        // padding-left: var(--page__sidePadding);
+        // padding-right: var(--page__sidePadding);
+        padding-left: 35px;
+        padding-right: 35px;
+        // &__heading {
+        //     padding-top: 139px;
+        // }
+    }
+    .housing__industry-image {
+        width: 100%;
+    }
+    .accordion-item {
+        max-width: 100%;
+    }
+    .accordion-heading__content {
+        font-size: 18px;
+    }
+}

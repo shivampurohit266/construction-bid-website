@@ -1,0 +1,47 @@
+@use "sass:map";
+@import "../../styles/constants";
+
+.solutions {
+    --solutions__gridColumns: 2fr 3fr;
+    --solutions__gridRows: 1fr;
+
+    align-items: center;
+    color: #604368;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: var(--solutions__gridColumns);
+    grid-template-rows: var(--solutions__gridRows);
+    justify-items: center;
+    max-width: var(--page__contentMaxWidth);
+    padding-left: var(--page__sidePadding);
+    padding-right: var(--page__sidePadding);
+
+    .solutions__title {
+        font-size: 52px;
+        line-height: 52px;
+    }
+
+    .solutions__list {
+        list-style-position: inside;
+        padding: 0;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .ask-for-a-quote-button {
+        font-size: 19px;
+        color: white;
+        background-color: #330f3f;
+        padding: 10px 25px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: map.get($breakpoints, "mobile")) {
+    .solutions {
+        --solutions__gridColumns: 1fr;
+        --solutions__gridRows: auto auto;
+    }
+}

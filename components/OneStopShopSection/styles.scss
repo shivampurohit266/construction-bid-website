@@ -1,0 +1,130 @@
+@use 'sass:map';
+@import '../../styles/constants';
+
+.stop__shop-container {
+  position: relative;
+}
+.stop__shop-hero-image {
+  width: 100%;
+}
+.stop__shop-text-container {
+  max-width: 786px;
+  display: flex;
+}
+.stop__shop-heading {
+  font-family: Cabin;
+  font-weight: 400px;
+  font-size: 42px;
+  line-height: 40px;
+  color: #ffffff;
+  width: 786px;
+}
+
+.stop__shop-text {
+  position: absolute;
+  left: 165px;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  &--one {
+    max-width: 759px;
+    font-family: Cabin;
+    font-weight: 400px;
+    font-size: 20px;
+    margin-top: 15px;
+    line-height: 31px;
+    color: #ffffff;
+  }
+  &--two {
+    max-width: 640px;
+    font-family: Cabin;
+    font-weight: 400px;
+    font-size: 20px;
+    color: #ffffff;
+  }
+}
+.stop__shop-images-container {
+  position: absolute;
+  bottom: 0px;
+  height: 315px;
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  gap: 33px;
+}
+
+.stop__shop-image--one {
+  max-width: 265px;
+}
+.stop__shop-image--two {
+  width: 441px;
+}
+.stop__shop-image--three {
+  max-width: 441px;
+}
+.stop__shop-image--four {
+  width: 194px;
+}
+@media only screen and (max-width: map.get($breakpoints, 'medium')) {
+  .stop__shop-text {
+    position: absolute;
+    left: 33px;
+    top: 21px;
+    max-width: 100%;
+  }
+  .stop__shop-heading {
+    max-width: 100%;
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+@media only screen and (max-width: map.get($breakpoints, 'medium')) {
+  .stop__shop-text {
+    &--one {
+      font-size: 17px;
+      line-height: 22px;
+    }
+    &--two {
+      font-size: 17px;
+      line-height: 22px;
+    }
+  }
+}
+
+@media only screen and (max-width: map.get($breakpoints, 'mobile')) {
+  .stop__shop-text {
+    max-width: 100%;
+    position: absolute;
+    left: 22.6px;
+    right: 22.6px;
+    top: 107px;
+  }
+  .stop__shop-heading {
+    font-size: 25px;
+    line-height: 27px;
+  }
+  .stop__shop-text {
+    &--one {
+      font-size: 15px;
+      line-height: 22px;
+    }
+    &--two {
+      font-size: 15px;
+      line-height: 22px;
+    }
+  }
+  .stop__shop-hero-image {
+    height: 500px;
+  }
+
+  .stop__shop-images-container {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+}

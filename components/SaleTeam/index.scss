@@ -1,0 +1,80 @@
+.contact-info {
+    padding: 80px 0px;
+}
+
+.contact-info h2 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 54px;
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+.contact-info .lrg-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 35px;
+    color: #151515;
+    margin-bottom: 30px;
+}
+
+.team-thumb {
+    margin-bottom: 20px;
+}
+
+.team-thumb img {
+    margin-bottom: 20px;
+}
+
+.team-thumb h3 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 35px;
+    letter-spacing: 0.2px;
+    color: #151515;
+    margin-bottom: 5px;
+}
+
+.team-thumb p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    color: #232329;
+    min-height: 23px;
+}
+
+.team-thumb a {
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #6480E1;
+}
+
+.team-row {
+    padding-top: 80px;
+}
+
+@media only screen and (max-width: 767px) {
+    .contact-info h2 {
+        font-size: 34px;
+        margin-bottom: 5px;
+    }
+
+    .team-row {
+        text-align: center;
+    }
+
+    .contact-info .lrg-text {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .team-thumb h3 {
+        font-size: 22px;
+    }
+}
